@@ -21,3 +21,12 @@ jobs:
 
       - name: Run docker with build
         run: sudo docker compose -f docker-compose.yml -p elk up --build -d
+
+      - name: List running containers # Diagnostic step
+        run: docker ps
+
+      - name: Check logs of a specific container # Optional, for specific container
+        run: docker logs [CONTAINER_NAME_OR_ID]
+
+      - name: Inspect specific container # Optional, to see why it might have exited
+        run: docker inspect [CONTAINER_NAME_OR_ID]
