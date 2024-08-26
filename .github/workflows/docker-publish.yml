@@ -3,7 +3,7 @@ name: Deploy ELK Stack
 on:
   push:
     branches:
-      - main # Adjust this to the branches you want to deploy from
+      - main # Adjust this to the branches you want to deploy
 
 jobs:
   deploy:
